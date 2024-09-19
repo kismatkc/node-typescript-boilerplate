@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 import express from "express";
 import CORS from "cors";
+import connectToDatabase from "./database.ts";
+import mongoose from "mongoose";
 
 dotenv.config();
 
