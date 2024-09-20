@@ -14,6 +14,23 @@ if (!PORT) {
   throw new Error("Please provide a valid port");
 }
 
+declare global {
+  var mongodbConnection: Promise<typeof mongoose | null>;
+}
+
+global.mongodbConnection = Promise.resolve(null);
+
+async function ensureMongoDbConnection(){
+  try {
+    if(!global.mongodbConnection) {
+      global.
+    }
+      
+  } catch (error) {
+    
+  }
+}
+
 app.listen(PORT, () => {
   console.log("Listening on port", PORT);
 });
